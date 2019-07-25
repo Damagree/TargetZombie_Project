@@ -572,12 +572,12 @@ GameObject:
   - component: {fileID: 2316768795276696790}
   - component: {fileID: 2316768795285842650}
   - component: {fileID: -7427887901184214220}
-  - component: {fileID: -4613127454957993179}
+  - component: {fileID: 5642363783544129666}
   - component: {fileID: -4407082071630114203}
   - component: {fileID: -804634553429724030}
   m_Layer: 0
   m_Name: female
-  m_TagString: Untagged
+  m_TagString: Civilian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +631,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-4613127454957993179
+--- !u!114 &5642363783544129666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -640,10 +640,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2316768795276388690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 950e8054735a9f941a906def4daedae8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a18833c7f947394b859821db6efe487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worth: 10
 --- !u!114 &-4407082071630114203
 MonoBehaviour:
   m_ObjectHideFlags: 0
