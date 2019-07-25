@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStats
 {
     public int currentLive = 3;
-    public int Score;
+    public static int Score;
     public bool isAlive = true;
+    public static int Stages = 0;
 }
