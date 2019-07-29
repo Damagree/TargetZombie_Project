@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerStats
 {
-    public int currentLive = 3;
-    public int Score;
-    public bool isAlive = true;
+    public static int currentLive = 3;
+    public static int Score;
+    public static bool isAlive = true;
+    public static int Stages = 0;
 }

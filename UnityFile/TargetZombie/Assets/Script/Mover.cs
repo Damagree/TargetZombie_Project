@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
     private new Rigidbody rigidbody;
-    public float speed;
+    public static float speed = 1;
 
     // Start is called before the first frame update
     void Start()

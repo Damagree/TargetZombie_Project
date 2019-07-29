@@ -1,28 +1,134 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject zombie;
-    public GameObject[] civilians;
-    public Vector3 spawnValues;
-    public Vector3 spawnValues2;
+    public GameObject bullet;
+    private GameObject[] flashKill;
 
-    // Start is called before the first frame update
-    void Start()
+    public MainMenu mainMenu;
+
+    private Enemy enemy;
+
+    public Text score;
+    public GameObject[] heart;
+    public Transform SpawnPoinA;
+    public Transform SpawnPointD;
+    public Button FlashKillButton;
+
+    private int lifeBefore = 3;
+    private int beforeScore = 0;
+
+    public ButtonClicked Sound;
+    private GameObject[] sfx;
+
+    public GameObject impactEffect;
+
+    private void Start()
     {
-        SpawnWave();
+        sfx = GameObject.FindGameObjectsWithTag("sfx");
+
+        WaveSpawner.EnemiesAlive = 0;
+        PlayerStats.currentLive = 3;
+        PlayerStats.Score = 0;
+
+        Debug.Log("sfx dalem sfx: " + Sound.GetComponent<ButtonClicked>().Bullet.name);
+        score.text = beforeScore.ToString();
+        for (int i = 0; i < heart.Length; i++)
+        {
+            heart[i].GetComponent<Image>().color = new Color32(255, 0, 0, 255);
+        }
+    }
+
+
+    private void Update()
+    {
+        //Update Text score
+        if(beforeScore != PlayerStats.Score)
+        {
+            score.text = PlayerStats.Score.ToString();
+            beforeScore = PlayerStats.Score;
+        }
+
+        //Controller debug
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Instantiate(bullet, SpawnPoinA.position, SpawnPoinA.rotation);
+            
+            sfx[0].GetComponent<AudioSource>().clip = Sound.GetComponent<ButtonClicked>().Bullet;
+            sfx[0].GetComponent<AudioSource>().Play();
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Instantiate(bullet, SpawnPointD.position, SpawnPointD.rotation);
+            sfx = GameObject.FindGameObjectsWithTag("sfx");
+            sfx[0].GetComponent<AudioSource>().clip = Sound.GetComponent<ButtonClicked>().Bullet;
+            sfx[0].GetComponent<AudioSource>().Play();
+        }
+
+        //checking player status
+        if(PlayerStats.currentLive <= 0)
+        {
+            GameOver();
+        }
+
+        //Check live
+        if(lifeBefore != PlayerStats.currentLive)
+        {
+            UpdateHeart();
+        }
+
+        //death
+        if (!PlayerStats.isAlive)
+        {
+            WaveSpawner.EnemiesAlive = 0;
+            PlayerStats.currentLive = 3;
+            PlayerStats.isAlive = true;
+            mainMenu.GameOver();
+        }
     }
     
-    void SpawnWave()
+    void UpdateHeart()
     {
-        Vector3 spawnPosition = new Vector3(spawnValues.x, spawnValues.y, spawnValues.z);
-        Quaternion spawnRotation = new Quaternion(0, 180, 0, 1);
-        Instantiate(zombie, spawnPosition, spawnRotation);
+        for (int i = 1; i <= heart.Length; i++)
+        {
+            if (i <= PlayerStats.currentLive)
+            {
+                heart[i-1].GetComponent<Image>().color = new Color32(255, 0, 0, 255);
+            }
+            else
+            {
+                heart[i-1].GetComponent<Image>().color = new Color32(255, 0, 0, 100);
+            }
 
-        Vector3 spawnPosition2 = new Vector3(spawnValues2.x, spawnValues2.y, spawnValues2.z);
-        Instantiate(zombie, spawnPosition2, spawnRotation);
+        }
     }
 
+    public void FlashKill()
+    {
+        flashKill = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach(GameObject flash in flashKill)
+        {
+            enemy = flash.GetComponent<Enemy>();
+            enemy.Die();
+            GameObject effect = Instantiate(impactEffect, enemy.transform.position, enemy.transform.rotation);
+            Destroy(effect.gameObject, 3f);
+        }
+        Debug.Log("score: " + PlayerStats.Score);
+
+    }
+    public void onClick()
+    {
+        FlashKill();
+    }
+
+    void GameOver()
+    {
+        PlayerStats.isAlive = false;
+        
+    }
 }
