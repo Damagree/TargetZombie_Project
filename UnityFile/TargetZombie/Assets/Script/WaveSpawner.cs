@@ -10,6 +10,7 @@ public class WaveSpawner : MonoBehaviour
     //public GameManager gameManager;
 
     public Wave wave;
+
     public Transform SpawnPoint;
     public Transform SpawnPoint2;
     //public Text waveCountdownText;
@@ -19,8 +20,10 @@ public class WaveSpawner : MonoBehaviour
     public float countdown = 2f;
     private int waveIndex = 0;
 
+    public int increaseSpeedIndex = 0;
     public int spawnPoint = 0;
-
+    public float spawnWait = 2f;
+    
     private void Update()
     {
         if(EnemiesAlive > 0)
@@ -31,25 +34,16 @@ public class WaveSpawner : MonoBehaviour
         {
             countdown -= Time.deltaTime;
         }
-
-       
-        //if (waveIndex == waves.Length)
-        //{
-        //    gameManager.WinLevel();
-        //    this.enabled = false;
-        //}
-
-        
-
-        //waveCountdownText.text = string.Format("{0:00.00}", countdown);
     }
 
     private void FixedUpdate()
     {
+
         if (countdown <= 0f)
         {
-            StartCoroutine(SpawnWave());
             
+            StartCoroutine(SpawnWave());
+            Debug.Log("enemies Alive: " + EnemiesAlive);
             countdown = timeBetweenWaves;
             return;
         }
@@ -61,10 +55,19 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator SpawnWave()
     {
         PlayerStats.Stages++;
+        int counter = wave.count;
 
-        EnemiesAlive = wave.count;
-        
-        for (int i = 0; i < wave.count; i++)
+        if (increaseSpeedIndex + 2 == PlayerStats.Stages)
+        {
+            Mover.speed+=0.5f;
+            increaseSpeedIndex += 2;
+            if (spawnWait > 1)
+            {
+                spawnWait -= 0.01f;
+            }
+        }
+
+        for (int i = 0; i < counter; i++)
         {
             int random = Random.Range(0, 100);
             int civilianIndex = Random.Range(0, 3);
@@ -75,7 +78,25 @@ public class WaveSpawner : MonoBehaviour
             }
             else
             {
-                SpawnEnemy(wave.enemy);
+
+                int randomZombie = Random.Range(0, 100);
+
+                if (PlayerStats.Stages % 3 == 0)
+                {
+                    //special zombie
+                    if(randomZombie < 20)
+                    {
+                        SpawnEnemy(wave.enemy[1]);
+                    }
+                    else
+                    {
+                        SpawnEnemy(wave.enemy[0]);
+                    }
+                }
+                else
+                {
+                    SpawnEnemy(wave.enemy[0]);
+                }
             }
 
             if (spawnPoint == 1)
@@ -86,9 +107,19 @@ public class WaveSpawner : MonoBehaviour
             {
                 spawnPoint++;
             }
-            
-            yield return new WaitForSeconds(1f);
+
+           
+            if (((i+1) % 2) != 0 || i == 0)
+            {
+                yield return new WaitForSeconds(0f);
+            }
+            else
+            {
+                yield return new WaitForSeconds(spawnWait);
+            }
+            EnemiesAlive++;
         }
+
 
         waveIndex++;
         wave.count += 2;

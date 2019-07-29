@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public string leaderboard = "Leaderboard";
     public string main = "Main";
     public string setting = "Setting";
+    public string gameOver = "Game Over";
     public UIFader uiFader;
     public GameObject musicManager;
     public GameObject buttonClicked;
@@ -37,6 +38,7 @@ public class MainMenu : MonoBehaviour
     {
         music = GameObject.FindGameObjectsWithTag("music");
         music[0].GetComponent<AudioSource>().clip = musicManager.GetComponent<MusicManager>().main;
+        music[0].GetComponent<AudioSource>().volume = 1;
         music[0].GetComponent<AudioSource>().Play();
         uiFader.FadeTo(main);
     }
@@ -52,11 +54,33 @@ public class MainMenu : MonoBehaviour
 
     public void BackToMenu()
     {
+        music = GameObject.FindGameObjectsWithTag("music");
+        if (music[0].GetComponent<AudioSource>().clip.name != musicManager.GetComponent<MusicManager>().menu.name)
+        {
+            music[0].GetComponent<AudioSource>().clip = musicManager.GetComponent<MusicManager>().menu;
+            StartCoroutine(music[0].GetComponent<MusicManager>().FadeIn());
+        }
         uiFader.FadeTo(mainMenu);
+    }
+
+    public void GameOver()
+    {
+        music = GameObject.FindGameObjectsWithTag("music");
+        if (music[0].GetComponent<AudioSource>().clip.name != musicManager.GetComponent<MusicManager>().gameOver.name)
+        {
+            music[0].GetComponent<AudioSource>().clip = musicManager.GetComponent<MusicManager>().gameOver;
+            StartCoroutine(music[0].GetComponent<MusicManager>().FadeIn());
+        }
+        uiFader.FadeTo(gameOver);
     }
 
     public void Quit()
     {
         Application.Quit();
+    }
+
+    IEnumerator WaitsSeconds()
+    {
+        yield return new WaitForSeconds(1f);
     }
 }
