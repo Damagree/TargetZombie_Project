@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Import/ToonyTinyPeople/TT_demo/sample_scene/TT_Citizens_sample_scene.unity
-    guid: ef84f0feb37c21e4f9485ac11ec74c35
+    path: Assets/Scenes/Main Menu.unity
+    guid: fd0572c4000124d4c8ad9caea20ecbce
+  - enabled: 1
+    path: Assets/Scenes/Leaderboard.unity
+    guid: caa13addf5a75b24fb1dded94e9ee1cc
+  - enabled: 1
+    path: Assets/Scenes/Setting.unity
+    guid: b1034170271b7404fbc28f400f88f631
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: a3b3f528383ceba418061592d259ee1c
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: fb4fb132496aa654e8aa5193de0d8133
   m_configObjects: {}

@@ -5,7 +5,22 @@ TagManager:
   serializedVersion: 2
   tags:
   - Boundary
-  - Civilian
+  - music
+  - sfx
+  - Enemy
+  - MaleCivilian2
+  - FemaleCivilian
+  - MaleCivilian
+  - Saver
+  - SpecialEnemy
+  - Bullet
+  - sfxZombies
+  - sfxHumans
+  - sfxBullets
+  - sfxButtons
+  - HighscoreName
+  - HighscoreScore
+  - Contents
   layers:
   - Default
   - TransparentFX
