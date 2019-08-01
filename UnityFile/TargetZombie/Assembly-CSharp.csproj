@@ -67,7 +67,6 @@
     <Compile Include="Assets\Import\VolumetricLines\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
     <Compile Include="Assets\Import\VolumetricLines\Scripts\Utils\TransformExtensionMethods.cs" />
     <Compile Include="Assets\Import\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
-    <Compile Include="Assets\Import\VolumetricLines\Scripts\VolumetricLineSettings.cs" />
     <Compile Include="Assets\Import\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
     <Compile Include="Assets\Import\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
     <Compile Include="Assets\Import\VolumetricLines\Scripts\VolumetricMultiLineBehavior.cs" />

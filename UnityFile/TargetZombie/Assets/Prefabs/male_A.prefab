@@ -749,7 +749,11 @@ GameObject:
   - component: {fileID: 3002465905561557415}
   m_Layer: 0
   m_Name: male_A
+<<<<<<< HEAD
   m_TagString: MaleCivilian
+=======
+  m_TagString: Civilian
+>>>>>>> Aryo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -767,7 +771,10 @@ Transform:
   m_Children:
   - {fileID: 6940298511867619978}
   - {fileID: 6940298511867632646}
+<<<<<<< HEAD
   - {fileID: 4450359696280621401}
+=======
+>>>>>>> Aryo
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
@@ -818,6 +825,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28a97a75d764ff41b745339cf656608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  speed: 1
+>>>>>>> Aryo
 --- !u!65 &-2792981819949274121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -829,8 +840,13 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
+<<<<<<< HEAD
   m_Size: {x: 1, y: 1.5, z: 1}
   m_Center: {x: 0, y: 0.8, z: 0}
+=======
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+>>>>>>> Aryo
 --- !u!114 &3002465905561557415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,8 +859,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a18833c7f947394b859821db6efe487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   savedText: {fileID: 4146712252233325512}
   speedAnimationChange: 7
+=======
+>>>>>>> Aryo
 --- !u!1 &6940298511867942470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,6 +1220,7 @@ Transform:
   m_Father: {fileID: 6940298511867677924}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &2480780219158551322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1357,3 +1377,5 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2480780219158551322}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Aryo

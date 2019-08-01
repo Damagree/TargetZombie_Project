@@ -799,8 +799,13 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
+<<<<<<< HEAD
   m_Size: {x: 1, y: 1.5, z: 1}
   m_Center: {x: 0, y: 0.8, z: 0}
+=======
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+>>>>>>> Aryo
 --- !u!114 &8605035408883132241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,10 +819,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worth: 10
+<<<<<<< HEAD
   ImpactEffect: {fileID: 3249751024200237525, guid: f8a72e67f7dfe7c4db05177014afd03c,
     type: 3}
   speedAnimationChange: 7
   rushText: {fileID: 1682080378824297350}
+=======
+>>>>>>> Aryo
 --- !u!1 &2298892907551037625
 GameObject:
   m_ObjectHideFlags: 0
