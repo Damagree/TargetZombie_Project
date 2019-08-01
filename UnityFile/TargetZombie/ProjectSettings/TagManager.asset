@@ -7,6 +7,17 @@ TagManager:
   - Boundary
   - music
   - sfx
+  - Enemy
+  - MaleCivilian2
+  - FemaleCivilian
+  - MaleCivilian
+  - Saver
+  - Bullet
+  - SpecialEnemy
+  - sfxButtons
+  - sfxHumans
+  - sfxZombies
+  - sfxBullets
   layers:
   - Default
   - TransparentFX

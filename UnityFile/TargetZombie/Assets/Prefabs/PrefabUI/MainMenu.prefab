@@ -51,5 +51,11 @@ MonoBehaviour:
   uiFader: {fileID: 0}
   musicManager: {fileID: 1414748644935430610, guid: 204127a0d98d04448894ae03b06f1f7e,
     type: 3}
-  buttonClicked: {fileID: 5181132842141511222, guid: fb10a1d4613fa7f459806d6f44e6e1a3,
+  sfxButton: {fileID: 6793049342345681169, guid: fb10a1d4613fa7f459806d6f44e6e1a3,
+    type: 3}
+  sfxBullet: {fileID: 2733134168984426178, guid: f263a209e345f324a8722142a3c3bffe,
+    type: 3}
+  sfxHuman: {fileID: 8918675103475755405, guid: 31803a266eb8f954e876b85f82184976,
+    type: 3}
+  sfxZombie: {fileID: 8327880268931861323, guid: 0c408cfc1d3d03748bfe5faf77384b55,
     type: 3}
