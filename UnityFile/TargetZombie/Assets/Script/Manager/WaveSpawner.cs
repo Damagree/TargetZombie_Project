@@ -70,7 +70,7 @@ public class WaveSpawner : MonoBehaviour
             increaseSpeedIndex += 2;
             if (spawnWait > 1)
             {
-                spawnWait -= 0.06f;
+                spawnWait -= 0.5f;
             }
         }
 

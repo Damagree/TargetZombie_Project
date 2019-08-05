@@ -8,6 +8,7 @@ public class SaveData : MonoBehaviour
     public GameObject HighscorePanel;
     public GameObject NoHighscorePanel;
     public GameObject ValidationPanel;
+    public GameObject HighestScoreStar;
     public Text CannotBlank;
     public Text CannotSame;
     public InputField inputName;
@@ -22,16 +23,30 @@ public class SaveData : MonoBehaviour
     {
         if (SaveSystem.LoadScore() != null)
         {
-            Debug.Log("start");
+            bool highest = true;
             ListPlayerData = SaveSystem.LoadScore();
-            Debug.Log("load");
-            foreach (var item in ListPlayerData)
-            {
-                Debug.Log("Username: " + item.username + " Score: " + item.score);
-            }
+
             if (ListPlayerData.Count < 10)
             {
-                
+                Debug.Log(ListPlayerData.Count);
+                if (ListPlayerData.Count > 0)
+                {
+                    foreach (var item in ListPlayerData)
+                    {
+                        if (item.score > name.score)
+                        {
+                            highest = false;
+                        }
+                    }
+                }
+                if (highest == true)
+                {
+                    HighestScoreStar.SetActive(true);
+                }
+                else
+                {
+                    HighestScoreStar.SetActive(false);
+                }
                 HighscorePanel.SetActive(true);
                 NoHighscorePanel.SetActive(false);
             }
@@ -41,7 +56,7 @@ public class SaveData : MonoBehaviour
                 string nameTemp = "";
                 bool First = true;
                 bool addToList = false;
-
+                highest = true;
                 foreach (var item in ListPlayerData)
                 {
                     if (item.score < name.score)
@@ -59,9 +74,19 @@ public class SaveData : MonoBehaviour
                             temp = item.score;
                         }
                     }
+                    else{
+                        highest = false;
+                    }
                 }
 
-                Debug.Log(nameTemp);
+                if (highest == true)
+                {
+                    HighestScoreStar.SetActive(true);
+                }
+                else
+                {
+                    HighestScoreStar.SetActive(false);
+                }
 
 
                 if (addToList == true)

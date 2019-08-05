@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
-
     public string mainMenu = "Main Menu";
     public string leaderboard = "Leaderboard";
     public string main = "Main";
@@ -57,6 +57,18 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(SceneManager.GetSceneByName("Leaderboard").isLoaded == true || SceneManager.GetSceneByName("Setting").isLoaded == true )
+            {
+
+                uiFader.FadeTo(mainMenu);
+            }
+        }
+    }
+
     public void Play()
     {
         music = GameObject.FindGameObjectsWithTag("music");
@@ -97,14 +109,9 @@ public class MainMenu : MonoBehaviour
         }
         uiFader.FadeTo(gameOver);
     }
-
+    
     public void Quit()
     {
         Application.Quit();
-    }
-
-    IEnumerator WaitsSeconds()
-    {
-        yield return new WaitForSeconds(1f);
     }
 }

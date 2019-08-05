@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public float tutorialTime=3f;
+
     public GameObject bullet;
     public GameObject bulletSaver;
     private GameObject[] flashKill;
+    private GameObject[] flashKillSpecial;
 
     private Vector2 beginTouchPos, endTouchPos;
     private Touch touch;
@@ -27,6 +30,7 @@ public class GameController : MonoBehaviour
     public SFXBullet BulletSound;
     private GameObject[] sfx;
 
+    public GameObject tutorial;
     public GameObject flashKillButton;
     public GameObject flashKillFader;
     public GameObject impactEffect;
@@ -51,8 +55,18 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        if (tutorialTime >= 0)
+        {
+            Debug.Log(tutorialTime);
+            tutorial.SetActive(true);
+            tutorialTime -= Time.deltaTime;
+        }
+        else
+        {
+            tutorial.SetActive(false);
+        }
         //Update Text score
-        if(beforeScore != PlayerStats.Score)
+        if (beforeScore != PlayerStats.Score)
         {
             score.text = PlayerStats.Score.ToString();
             beforeScore = PlayerStats.Score;
@@ -182,7 +196,18 @@ public class GameController : MonoBehaviour
     public void FlashKill()
     {
         flashKill = GameObject.FindGameObjectsWithTag("Enemy");
+        flashKillSpecial = GameObject.FindGameObjectsWithTag("SpecialEnemy");
+
         foreach (GameObject flash in flashKill)
+        {
+            enemy = flash.GetComponent<Enemy>();
+            enemy.Die();
+            GameObject effect = Instantiate(impactEffect, enemy.transform.position, enemy.transform.rotation);
+            Destroy(effect.gameObject, 3f);
+
+        }
+
+        foreach (GameObject flash in flashKillSpecial)
         {
             enemy = flash.GetComponent<Enemy>();
             enemy.Die();
@@ -257,4 +282,5 @@ public class GameController : MonoBehaviour
             PlayBulletSFX();
         }
     }
+
 }
