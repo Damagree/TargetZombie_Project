@@ -17,6 +17,13 @@ public class PauseMenu : MonoBehaviour
            Toggle();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Toggle();
+        }
+    }
     public void Toggle()
     {
         ui.SetActive(!ui.activeSelf);

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,12 +7,13 @@ public class GameController : MonoBehaviour
     public GameObject bullet;
     public GameObject bulletSaver;
     private GameObject[] flashKill;
+    private GameObject[] flashKillSpecial;
 
     private Vector2 beginTouchPos, endTouchPos;
     private Touch touch;
+    public List<touchLocation> touches = new List<touchLocation>();
 
     public MainMenu mainMenu;
-
     private Enemy enemy;
 
     public Text score;
@@ -31,6 +31,11 @@ public class GameController : MonoBehaviour
     public GameObject flashKillFader;
     public GameObject impactEffect;
     public GameObject flashButton;
+    public GameObject tutorial;
+    public Text speed;
+    private float beforeSpeed=0;
+    private float tutorialTime = 3f;
+
 
     private void Start()
     {
@@ -39,8 +44,11 @@ public class GameController : MonoBehaviour
         PlayerStats.currentLive = 3;
         PlayerStats.Score = 0;
         Mover.speed = 1;
+        PlayerStats.Stages = 0;
         WaveSpawner.spawnWait = 2f;
         PlayerStats.hasFlashKill = false;
+        beforeSpeed= Mover.speed;
+        speed.text = Mover.speed.ToString();
 
         score.text = beforeScore.ToString();
         for (int i = 0; i < heart.Length; i++)
@@ -51,8 +59,18 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        if (tutorialTime >= 0)
+        {
+            Debug.Log(tutorialTime);
+            tutorial.SetActive(true);
+            tutorialTime -= Time.deltaTime;
+        }
+        else
+        {
+            Destroy(tutorial);
+        }
         //Update Text score
-        if(beforeScore != PlayerStats.Score)
+        if (beforeScore != PlayerStats.Score)
         {
             score.text = PlayerStats.Score.ToString();
             beforeScore = PlayerStats.Score;
@@ -93,42 +111,50 @@ public class GameController : MonoBehaviour
         }
 
         //Touch Input
-        if (Input.touchCount > 0)
+
+        int i = 0;
+        while (i < Input.touchCount)
         {
-            touch = Input.GetTouch(0);
-            Debug.Log("Current Position x : " + touch.position.x);
-            Debug.Log("Current Position y : " + touch.position.y);
+            Vector2 Tolerance = new Vector2(Screen.width / 10, Screen.height / 10);
+            touch = Input.GetTouch(i);
             switch (touch.phase)
             {
                 case TouchPhase.Began:
-                    beginTouchPos = touch.position;
+                    touches.Add(new touchLocation(touch.fingerId, touch.position));
+                    //beginTouchPos = touch.position;
                     break;
                 case TouchPhase.Ended:
-                    endTouchPos = touch.position;
-                    if (beginTouchPos.y <= Screen.height / 2)
+                    touchLocation currentTouch = touches.Find(touchLocation => touchLocation.touchId == touch.fingerId);
+                    currentTouch.endTouch = touch.position;
+                    //endTouchPos = touch.position;
+                    if (currentTouch.beginTouch.y <= Screen.height / 2)
                     {
-
-                        Debug.Log("begin y: " + beginTouchPos.y);
-                        Debug.Log("end y: " + endTouchPos.y);
-
-                        if (beginTouchPos == endTouchPos)
+                        if (currentTouch.beginTouch == currentTouch.endTouch)
                         {
-                            CheckTap();
+                            CheckTap(currentTouch.beginTouch);
                         }
-
-                        if (beginTouchPos != endTouchPos)
+                         else if (currentTouch.beginTouch != currentTouch.endTouch) 
                         {
-                            CheckSwipe();
+                            if (Mathf.Abs(currentTouch.endTouch.x - currentTouch.beginTouch.x) >= Tolerance.x ||
+                                Mathf.Abs(currentTouch.endTouch.y - currentTouch.beginTouch.y) >= Tolerance.y)
+                            {
+                                CheckSwipe(currentTouch.beginTouch);
+                            }
+                            else
+                            {
+                                CheckTap(currentTouch.beginTouch);
+                            }
                         }
+                        
                     }
-
-
+                    touches.RemoveAt(touches.IndexOf(currentTouch));
                     break;
                 case TouchPhase.Canceled:
                     break;
                 default:
-                    break;
+                    break; 
             }
+            i++;
         }
 
         //checking player status
@@ -144,7 +170,14 @@ public class GameController : MonoBehaviour
         }
 
         //FlashKill earned
-        FlashKillButtonActive();
+        if (PlayerStats.hasFlashKill == true)
+        {
+            flashKillButton.SetActive(true);
+        }
+        else
+        {
+            flashKillButton.SetActive(false);
+        }
 
         //death
         if (!PlayerStats.isAlive)
@@ -154,19 +187,31 @@ public class GameController : MonoBehaviour
             PlayerStats.isAlive = true;
             mainMenu.GameOver();
         }
+        if (beforeSpeed != Mover.speed) 
+        {
+            beforeSpeed = Mover.speed;
+            speed.text=Mover.speed.ToString();
+        }
     }
     
     void UpdateHeart()
     {
         for (int i = 1; i <= heart.Length; i++)
         {
-            if (i <= PlayerStats.currentLive)
+            if (PlayerStats.currentLive >= 0)
             {
-                heart[i-1].GetComponent<Image>().color = new Color32(255, 0, 0, 255);
+                if (i <= PlayerStats.currentLive)
+                {
+                    heart[i - 1].GetComponent<Image>().color = new Color32(255, 0, 0, 255);
+                }
+                else
+                {
+                    heart[i - 1].GetComponent<Image>().color = new Color32(255, 0, 0, 100);
+                }
             }
             else
             {
-                heart[i-1].GetComponent<Image>().color = new Color32(255, 0, 0, 100);
+                heart[i - 1].GetComponent<Image>().color = new Color32(255, 0, 0, 100);
             }
 
         }
@@ -175,31 +220,34 @@ public class GameController : MonoBehaviour
     public void FlashKill()
     {
         flashKill = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject flash in flashKill)
-        {
-            enemy = flash.GetComponent<Enemy>();
-            enemy.Die();
-            GameObject effect = Instantiate(impactEffect, enemy.transform.position, enemy.transform.rotation);
-            Destroy(effect.gameObject, 3f);
+        flashKillSpecial = GameObject.FindGameObjectsWithTag("SpecialEnemy");
 
+        if (flashKill != null)
+        {
+            foreach (GameObject flash in flashKill)
+            {
+                enemy = flash.GetComponent<Enemy>();
+                enemy.Die();
+                GameObject effect = Instantiate(impactEffect, enemy.transform.position, enemy.transform.rotation);
+                Destroy(effect.gameObject, 3f);
+
+            }
         }
+        if (flashKillSpecial != null)
+        {
+            foreach (GameObject flash in flashKillSpecial)
+            {
+                enemy = flash.GetComponent<Enemy>();
+                enemy.Die();
+                GameObject effect = Instantiate(impactEffect, enemy.transform.position, enemy.transform.rotation);
+                Destroy(effect.gameObject, 3f);
+
+            }
+        }
+
+        Handheld.Vibrate();
         PlayerStats.hasFlashKill = false;
         flashKillFader.SetActive(false);
-    }
-
-    void FlashKillButtonActive()
-    {
-        if(PlayerStats.hasFlashKill == true)
-        {
-            flashKillButton.SetActive(true);
-        }
-        else
-        {
-            flashButton.GetComponent<Animator>().Play("Normal", 0, 0f);
-            flashButton.GetComponent<Animator>().Play("Pressed", 0, 0f);
-            flashButton.GetComponent<Animator>().Play("Highlighted", 0, 0f);
-            flashKillButton.SetActive(false);
-        }
     }
 
     public void onClick()
@@ -219,9 +267,9 @@ public class GameController : MonoBehaviour
         PlayerStats.isAlive = false;
     }
 
-    void CheckTap()
+    void CheckTap(Vector2 beginTouch)
     {
-        if (beginTouchPos.x < Screen.width / 2)
+        if (beginTouch.x < Screen.width / 2)
         {
             Instantiate(bullet, SpawnPoinA.position, SpawnPoinA.rotation);
 
@@ -237,9 +285,9 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void CheckSwipe()
+    void CheckSwipe(Vector2 beginTouch)
     {
-        if (beginTouchPos.x < Screen.width / 2)
+        if (beginTouch.x < Screen.width / 2)
         {
             Instantiate(bulletSaver, SpawnPoinA.position, SpawnPoinA.rotation);
             PlayBulletSFX();

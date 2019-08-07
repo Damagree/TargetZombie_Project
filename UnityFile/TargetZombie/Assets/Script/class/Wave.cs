@@ -8,5 +8,4 @@ public class Wave
     public GameObject[] enemy;
     public GameObject[] civilian;
     public int count;
-    public float rate;
 }

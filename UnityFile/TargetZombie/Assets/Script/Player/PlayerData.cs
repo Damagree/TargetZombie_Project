@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
-using UnityEngine;
-using UnityEngine.UI;
-
-
-[System.Serializable]
+﻿[System.Serializable]
 public class PlayerData
 {
     public static PlayerData current;

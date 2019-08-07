@@ -12,15 +12,12 @@ TagManager:
   - FemaleCivilian
   - MaleCivilian
   - Saver
-  - SpecialEnemy
   - Bullet
-  - sfxZombies
-  - sfxHumans
-  - sfxBullets
+  - SpecialEnemy
   - sfxButtons
-  - HighscoreName
-  - HighscoreScore
-  - Contents
+  - sfxHumans
+  - sfxZombies
+  - sfxBullets
   layers:
   - Default
   - TransparentFX
@@ -30,8 +27,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Envronment
+  - Character
   - 
   - 
   - 

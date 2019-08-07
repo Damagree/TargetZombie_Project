@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class HighscoreManager : MonoBehaviour
@@ -11,13 +10,11 @@ public class HighscoreManager : MonoBehaviour
     public string parrentPath;
     public Transform parrentTransform;
     private GameObject parrentObject;
-
     //Child
     public GameObject Highscore;
 
     private void Start()
     {
-
         ListPlayerData = SaveSystem.LoadScore();
         ListPlayer = ListPlayerData.ToArray();
         Debug.Log("listplayer length: " + ListPlayer.Length);
@@ -26,8 +23,18 @@ public class HighscoreManager : MonoBehaviour
         for (int i = 0; i < ListPlayer.Length; i++)
         {
             Highscore.GetComponent<PanelHighscore>().InitPanel(i + 1, ListPlayer[i].username, ListPlayer[i].score);
-            GameObject newField = Instantiate(Highscore, parrentTransform.position, parrentTransform.rotation);
+            GameObject newField = Instantiate(Highscore, transform);
+            
             newField.transform.SetParent(parrentTransform.transform);
+
+            Vector3 tempScale = newField.transform.localScale;
+
+            Debug.Log("tempScale: " + tempScale);
+
+            tempScale = new Vector3(1, 1, 1) - tempScale;
+            newField.transform.localScale += tempScale;
+
+            Debug.Log(newField.transform.localScale);
         }
     }
 
