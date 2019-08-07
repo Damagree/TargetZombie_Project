@@ -1,19 +1,15 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class WaveSpawner : MonoBehaviour
 {
     public static int EnemiesAlive = 0;
 
-    //public GameManager gameManager;
-
     public Wave wave;
 
     public Transform SpawnPoint;
     public Transform SpawnPoint2;
-    //public Text waveCountdownText;
 
     public float timeBetweenWaves = 5f;
 
@@ -21,13 +17,14 @@ public class WaveSpawner : MonoBehaviour
     private int waveIndex = 0;
 
     public int increaseSpeedIndex = 0;
-    public int spawnPoint = 0;
+    private int spawnPoint = 0;
     public static float spawnWait = 2f;
     private GameObject[] sfx;
     public SFXZombie ZombieSound;
 
     void Start()
     {
+        increaseSpeedIndex = 0;
         sfx = GameObject.FindGameObjectsWithTag("sfxZombies");
     }
     private void Update()
@@ -47,9 +44,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (countdown <= 0f)
         {
-            
             StartCoroutine(SpawnWave());
-            Debug.Log("enemies Alive: " + EnemiesAlive);
             countdown = timeBetweenWaves;
             return;
         }
@@ -68,9 +63,9 @@ public class WaveSpawner : MonoBehaviour
         {
             Mover.speed+=0.5f;
             increaseSpeedIndex += 2;
-            if (spawnWait > 1)
+            if (spawnWait > 0.8)
             {
-                spawnWait -= 0.5f;
+                spawnWait -= 0.2f;
             }
         }
 

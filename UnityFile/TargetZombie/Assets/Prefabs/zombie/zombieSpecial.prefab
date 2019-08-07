@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508171728}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508171728
 Transform:
@@ -40,12 +40,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508222548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508222548
 Transform:
@@ -71,12 +71,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508234948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508234948
 Transform:
@@ -102,12 +102,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508239858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 HeadNub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508239858
 Transform:
@@ -132,12 +132,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508230016}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_hand_container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508230016
 Transform:
@@ -162,12 +162,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508247152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508247152
 Transform:
@@ -193,12 +193,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508210662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508210662
 Transform:
@@ -224,12 +224,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508157994}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508157994
 Transform:
@@ -257,12 +257,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508243590}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508243590
 Transform:
@@ -288,12 +288,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508207746}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508207746
 Transform:
@@ -319,12 +319,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508226256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508226256
 Transform:
@@ -353,12 +353,12 @@ GameObject:
   m_Component:
   - component: {fileID: 125501177508178362}
   - component: {fileID: 125501177513273310}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body_01_tanktop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508178362
 Transform:
@@ -447,12 +447,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508168942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508168942
 Transform:
@@ -478,12 +478,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508233528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508233528
 Transform:
@@ -510,12 +510,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508246332}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HEAD_CONTAINER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508246332
 Transform:
@@ -541,12 +541,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508234680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508234680
 Transform:
@@ -573,12 +573,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508195300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508195300
 Transform:
@@ -604,12 +604,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508265560}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 Footsteps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508265560
 Transform:
@@ -634,12 +634,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508204160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Toe0Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508204160
 Transform:
@@ -664,12 +664,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508225574}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508225574
 Transform:
@@ -695,12 +695,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508190478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Toe0Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508190478
 Transform:
@@ -725,12 +725,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508196980}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508196980
 Transform:
@@ -756,12 +756,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508168378}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508168378
 Transform:
@@ -787,12 +787,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508263546}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508263546
 Transform:
@@ -818,12 +818,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508226232}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508226232
 Transform:
@@ -849,12 +849,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508196810}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508196810
 Transform:
@@ -886,12 +886,12 @@ GameObject:
   - component: {fileID: 125501177476572070}
   - component: {fileID: 125501177476572072}
   - component: {fileID: 7580026909512160118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: zombieSpecial
   m_TagString: SpecialEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508228012
 Transform:
@@ -996,12 +996,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508158656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508158656
 Transform:
@@ -1027,12 +1027,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125501177508261468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508261468
 Transform:
@@ -1059,12 +1059,12 @@ GameObject:
   - component: {fileID: 125501177508224998}
   - component: {fileID: 125501177511076412}
   - component: {fileID: 125501177510474766}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Z_head_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &125501177508224998
 Transform:
@@ -1132,6 +1132,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 125501177508228012}
     m_Modifications:
+    - target: {fileID: 8642329978752138343, guid: 984042621ad7611448dd4e263df08663,
+        type: 3}
+      propertyPath: m_Name
+      value: RUSH
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642329978752138343, guid: 984042621ad7611448dd4e263df08663,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642329978752138343, guid: 984042621ad7611448dd4e263df08663,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642329978752138343, guid: 984042621ad7611448dd4e263df08663,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8332071703473551094, guid: 984042621ad7611448dd4e263df08663,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1237,15 +1257,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8642329978752138343, guid: 984042621ad7611448dd4e263df08663,
+    - target: {fileID: 6242727014507763762, guid: 984042621ad7611448dd4e263df08663,
         type: 3}
-      propertyPath: m_Name
-      value: RUSH
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 8642329978752138343, guid: 984042621ad7611448dd4e263df08663,
+    - target: {fileID: 6242727014507763762, guid: 984042621ad7611448dd4e263df08663,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 790695304781406258, guid: 984042621ad7611448dd4e263df08663,
         type: 3}

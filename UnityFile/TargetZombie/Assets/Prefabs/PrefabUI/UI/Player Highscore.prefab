@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 192.40002, y: -1.6375}
-  m_SizeDelta: {x: 187.2, y: 51.825}
+  m_AnchoredPosition: {x: 180.15001, y: -0.36876}
+  m_SizeDelta: {x: 162.7, y: 49.263}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4596562368236184923
 CanvasRenderer:
@@ -67,18 +67,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3243e335d261bbb4f8de9320e7946523, type: 3}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 223
+  m_Text: 91
 --- !u!1 &2248893751522954471
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 3981034523641939745}
   - component: {fileID: 433346608153965965}
   - component: {fileID: -8593553791257414824}
+  - component: {fileID: -3186210243755483416}
   m_Layer: 5
   m_Name: Player Highscore
   m_TagString: Untagged
@@ -116,10 +117,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -360, y: -1280}
+  m_SizeDelta: {x: 523, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7623590833587043986
 CanvasRenderer:
@@ -185,6 +186,27 @@ MonoBehaviour:
   nameText: {fileID: 8608473376819851065}
   scoreText: {fileID: 1466651930036910205}
   rank: {fileID: 5796080763322450025}
+--- !u!223 &-3186210243755483416
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2248893751522954471}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &4587379211625661947
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -210, y: -3.275}
+  m_AnchoredPosition: {x: -210, y: -0}
   m_SizeDelta: {x: 67.5, y: 48.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5658608513538581504
@@ -257,7 +279,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -298,8 +320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 0.000024796}
-  m_SizeDelta: {x: 214, y: 48.55}
+  m_AnchoredPosition: {x: -4.6, y: 0.000024796}
+  m_SizeDelta: {x: 206.8, y: 48.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4494734787825586194
 CanvasRenderer:
@@ -336,10 +358,10 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: cat
+  m_Text: 1.1

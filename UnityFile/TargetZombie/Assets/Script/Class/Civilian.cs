@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Civilian : MonoBehaviour
 {
@@ -20,8 +18,6 @@ public class Civilian : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
-
-        Debug.Log("current Health: " + PlayerStats.currentLive);
         fSpeed = Mover.speed;
         if (fSpeed >= speedAnimationChange)
         {
@@ -33,7 +29,6 @@ public class Civilian : MonoBehaviour
     {
         Animator animator = gameObject.GetComponent<Animator>();
         animator.SetFloat("speed", fSpeed);
-        Debug.Log("Animation Changed Civilian!");
         animator.Play("Z_run");
     }
 
@@ -69,7 +64,6 @@ public class Civilian : MonoBehaviour
             Die();
             Destroy(other.gameObject);
             WaveSpawner.EnemiesAlive--;
-            Debug.Log("current Health: " + PlayerStats.currentLive);
         }
         else if (other.tag == "Saver" && checkSavedBullet == false)
         {

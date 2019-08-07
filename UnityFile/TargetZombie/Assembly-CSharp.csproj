@@ -62,21 +62,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Import\UmbraEvolution\General\CustomAttributes\GreaterThanFloat.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\CustomAttributes\GreaterThanInt.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\CustomAttributes\InvisibleInInspector.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\CustomAttributes\LessThanFloat.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\CustomAttributes\LessThanInt.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\CustomAttributes\ReadOnlyInInspector.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\OtherCode\SerializeUnityThings.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\PerLayerCameraClipping\Scripts\PerLayerCulling.cs" />
     <Compile Include="Assets\Import\VolumetricLines\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
     <Compile Include="Assets\Import\VolumetricLines\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
     <Compile Include="Assets\Import\VolumetricLines\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
     <Compile Include="Assets\Import\VolumetricLines\Scripts\Utils\TransformExtensionMethods.cs" />
     <Compile Include="Assets\Import\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
-    <Compile Include="Assets\Import\VolumetricLines\Scripts\VolumetricLineSettings.cs" />
     <Compile Include="Assets\Import\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
     <Compile Include="Assets\Import\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
     <Compile Include="Assets\Import\VolumetricLines\Scripts\VolumetricMultiLineBehavior.cs" />
     <Compile Include="Assets\Script\Camera\CameraOrtho.cs" />
     <Compile Include="Assets\Script\Camera\CameraShake.cs" />
     <Compile Include="Assets\Script\Camera\CameraUtilities.cs" />
+    <Compile Include="Assets\Script\Camera\SetResolution.cs" />
     <Compile Include="Assets\Script\Class\Civilian.cs" />
     <Compile Include="Assets\Script\Class\Enemy.cs" />
     <Compile Include="Assets\Script\Class\PlayerStats.cs" />
+    <Compile Include="Assets\Script\Class\touchLocation.cs" />
     <Compile Include="Assets\Script\Class\Wave.cs" />
     <Compile Include="Assets\Script\fx\SFXBullet.cs" />
     <Compile Include="Assets\Script\fx\SFXButton.cs" />
@@ -97,11 +106,13 @@
     <Compile Include="Assets\Script\Save\SaveData.cs" />
     <Compile Include="Assets\Script\Save\SaveSystem.cs" />
     <Compile Include="Assets\Script\Save\ScoreScript.cs" />
+    <Compile Include="Assets\Script\SFX\DayNight.cs" />
     <Compile Include="Assets\Script\UI\PauseMenu.cs" />
     <Compile Include="Assets\Script\UI\UIFader.cs" />
     <None Include="Assets\Import\VolumetricLines\Shaders\_StripShader.cginc" />
     <None Include="Assets\Import\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Import\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Import\UmbraEvolution\PerLayerCameraClipping\README_PerLayerCameraClipping.txt" />
     <None Include="Assets\Import\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Import\VolumetricLines\Shaders\Additive.shader" />
     <None Include="Assets\Import\VolumetricLines\Shaders\AlphaBlended.shader" />
@@ -114,6 +125,7 @@
     <None Include="Assets\Import\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Import\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Import\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Import\UmbraEvolution\General\README_General.txt" />
     <None Include="Assets\Import\VolumetricLines\Shaders\Fast-AlphaBlended.shader" />
     <None Include="Assets\Import\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Import\VolumetricLines\Shaders\Strip-AlphaBlended.shader" />
