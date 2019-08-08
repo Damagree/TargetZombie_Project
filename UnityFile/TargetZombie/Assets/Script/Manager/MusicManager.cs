@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MusicManager : MonoBehaviour
@@ -56,14 +54,13 @@ public class MusicManager : MonoBehaviour
             yield return null;
         }
     }
-
-    //public IEnumerator FadeOut()
-    //{
-    //    float startVolume = gameObject.GetComponent<AudioSource>().volume;
-    //    while (gameObject.GetComponent<AudioSource>().volume > 0)
-    //    {
-    //        gameObject.GetComponent<AudioSource>().volume -= startVolume * Time.deltaTime / 5f;
-    //        yield return null;
-    //    }
-    //}
+    public IEnumerator FadeOut()
+    {
+        float startVolume = gameObject.GetComponent<AudioSource>().volume;
+        while (gameObject.GetComponent<AudioSource>().volume > 0)
+        {
+            gameObject.GetComponent<AudioSource>().volume -= startVolume * Time.deltaTime / 5f;
+            yield return null;
+        }
+    }
 }

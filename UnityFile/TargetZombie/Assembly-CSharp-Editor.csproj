@@ -62,8 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\IMedia9.KIT\Motion Manager\Locomotion\Mechanim3D\Editor\Mechanim3DKeyboardEditor.cs" />
-    <Compile Include="Assets\IMedia9.KIT\Touch Manager\Editor\TouchKitEditor.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\Editor\GreaterThanFloatDrawer.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\Editor\GreaterThanIntDrawer.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\Editor\InvisibleDrawer.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\Editor\LessThanFloatDrawer.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\Editor\LessThanIntDrawer.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\General\Editor\ReadOnlyDrawer.cs" />
+    <Compile Include="Assets\Import\UmbraEvolution\PerLayerCameraClipping\Editor\PerLayerCullingEditor.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Playground/Unity Project/TargetZombie/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
