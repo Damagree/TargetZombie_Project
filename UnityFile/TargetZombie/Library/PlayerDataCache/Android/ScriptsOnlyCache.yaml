@@ -39,8 +39,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -369,6 +367,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9420}
     - Class: 114
       Script: {instanceID: 9422}
+    - Class: 114
+      Script: {instanceID: 9424}
     - Class: 114
       Script: {instanceID: 9428}
     - Class: 114

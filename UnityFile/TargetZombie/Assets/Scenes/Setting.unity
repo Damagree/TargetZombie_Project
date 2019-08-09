@@ -1035,8 +1035,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10bcd9ffb3952be40938b792c2d8035a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchTextMusic: {fileID: 292660223}
-  switchTextSFX: {fileID: 711084313}
+  switchTextMusic: {fileID: 1892996188}
+  switchTextSFX: {fileID: 667313732}
 --- !u!1 &1583414336
 GameObject:
   m_ObjectHideFlags: 0
